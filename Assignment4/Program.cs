@@ -7,6 +7,17 @@
 /// Last updated: Dec 12, 2025
 /// </summary>
 
+//Ride Class
+//void Ride()
+//string Name (get, set); // Property 'Name'
+//int FrightFactor(get, set); // Property 'FrightFactor'
+//double cost(get, set); // Property 'CostToEnter'
+//int vistors(get, set); // Property 'VisitorsToday'
+
+//default constructor
+
+//greedy constructor
+
 // Part 1A
 // Create a 'Ride Class'
 // 1) - A `string` field to store the ride’s **name** and a corresponding `Name` property with both `get` and `set` functionality.
@@ -68,6 +79,127 @@
 // 4) Edit a Ride
 // 5) Remove a Ride
 // 6) Quit and Save
-// ```
+// 
 // 
 // You must use a modular approach to your solution: utilize previous work and in-class examples to help with this task.### Part B – Ride List + Menu-Driven Program 🎪
+
+//Program layout
+
+//1 - Menu
+   
+Menu();
+
+static void Menu()
+{
+    bool userQuit = false;
+    int userInput = 0;
+
+    do
+    {
+        // 1) Display All Rides
+        Console.WriteLine("1) Display All Rides");
+        // 2) Search for a Ride by Name
+        Console.WriteLine("2) Search for a Ride by Name");
+        // 3) Add a New Ride
+        Console.WriteLine("3) Add a New Ride");
+        // 4) Edit a Ride
+        Console.WriteLine("4) Edit a Ride");
+        // 5) Remove a Ride
+        Console.WriteLine("5) Remove a Ride");
+        // 6) Quit and Save
+        Console.WriteLine("6) Quit and Save");
+        Console.Write("Enter a letter to select a menu option: ");
+        
+        try
+        {
+            userInput = int.Parse(Console.ReadLine());
+            switch (userInput)
+            {
+                case 1:
+
+                    //DisplayAllRides();
+                    Console.WriteLine("DisplayAllRides()");
+                    break;
+
+                case 2:
+
+                    //SearchRideName();
+                    Console.WriteLine("SearchRideName()");
+                    break;
+                case 3:
+
+                    //AddNewRide();
+                    Console.WriteLine("AddNewRide()");
+                    break;
+                case 4:
+
+                    //EditARide();
+                    Console.WriteLine("EditARide()");
+                    break;
+                case 5:
+
+                    //RemoveARide();
+                    Console.WriteLine("RemoveARide()");
+                    break;
+                case 6:
+
+                    //SaveAndQuit();
+                    userQuit = true;
+                    Console.WriteLine("SaveAndQuit()");
+                     break;
+
+                default:
+                    try
+                    {
+                        Console.WriteLine("Input must be a number between 1-6. Examples: 1,2,3,4,5, or 6");
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("Input must be a number between 1-6. Examples: 1,2,3,4,5, or 6");
+                    }
+                    break;
+
+            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("Input must be a number between 1-6. Examples: 1,2,3,4,5, or 6");
+
+        }
+    } while (userQuit == false);
+    
+    
+}
+
+
+// Menu Options
+//1
+// static void DisplayRides()
+//{
+//
+//}
+//2
+// static void SearchRidesName()
+//{
+//
+//}
+//3
+// static void AddNewRide()
+//{
+//
+//}
+//4
+// static void EditARide()
+//{
+//
+//}
+//5
+// static void RemoveARide()
+//{
+//
+//}
+//6
+// static void SaveAndQuit()
+//{
+//
+//}
